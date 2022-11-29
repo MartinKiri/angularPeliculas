@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="heading text-center">
+    <h2>Peliculas</h2>
+    <p>Estas son las peliculas mas vistas de la siguiente categoria </p>
+  </div>
+  <div class="row" >
+    <div *ngFor="let pelicula of id" class="col-md-6 col-lg-4">
+      <div class="card border-2">
+        <a href="">
+          <img class="card-img-top scale-on-hover" src="" alt="img" /></a>
+        <div class="card-body">
+          <h2>
+            <a href="#"></a>
+          </h2>
+          <div class="btn btn-info" role="button">Más información
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

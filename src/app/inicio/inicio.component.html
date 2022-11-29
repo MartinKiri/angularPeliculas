@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="heading text-center">
+    <h2>Peliculas</h2>
+    <p>Estas son las peliculas que mas se han visto en toda esta semana</p>
+  </div>
+  <div class="row">
+    <div *ngFor="let pelis of muestra.results | paginate: { itemsPerPage: 8, currentPage: page }"
+      class="col-md-6 col-lg-4 cartas">
+      <div class="card border-2">
+        <a href="#">
+          <img class="card-img-top scale-on-hover" src="{{muestraimg+pelis.backdrop_path}}" alt="img de la peli" /></a>
+        <div class="card-body">
+          <h2>
+            <a href="#">{{pelis.title}}</a> <br>
+          </h2>
+          <div class="btn btn-info" role="button" routerLink="/vistadetalle/{{pelis.id}}">Más información
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="elementos mt-3">
+    <pagination-controls class="mt-2" (pageChange)="page = $event" previousLabel="Anterior" nextLabel="Siguiente" ></pagination-controls>
+  </div>
+</div>

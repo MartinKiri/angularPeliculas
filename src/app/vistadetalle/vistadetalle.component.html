@@ -1,0 +1,27 @@
+<div class="container mt-2">
+  <div class="row">
+    <div class="col-4">
+      <div class="imgagen">
+        <a href="#">
+          <img class="card-img-top scale-on-hover" src="{{muestraimagen}}" alt="img" /></a>
+      </div>
+    </div>
+    <div class="col-8 definicion">
+      <div class="nombre">
+        <h3>{{datos.original_title}}</h3>
+      </div>
+      <div class="puntuacion">
+        <p>Puntuación de la pelicula :{{datos.vote_average}}</p>
+        <p>ID de la pelicula :{{datos.id}}</p>
+        <p>Descripcion de la pelicula :{{datos.overview}}</p>
+        <p>Donde ver la peli (Algunas peliculas no tienen ruta) : <a href="{{datos.homepage}}">ver peli</a> </p>
+        <p>Donde ver la peli : <a href="{{this.linkYou+this.video.results[0].key}}"> ver triler</a> </p>
+      </div>
+      <div class="generos">
+        <p> Generos: 
+          <li *ngFor="let generos of datos.genres">{{generos.name}}</li>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

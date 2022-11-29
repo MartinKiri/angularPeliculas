@@ -1,27 +1,56 @@
-import { Component, NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { IndexComponent } from './index/index.component';
 
-// import { DetalleComponent } from './detalle/detalle.component';
-// import { FooterComponent } from './footer/footer.component';
-// import { IndexComponent } from './index/index.component';
 import { LoginComponent } from './login/login.component';
-// import { PerfilComponent } from './perfil/perfil.component';
-import { RegisterComponent } from './register/register.component';
+import { RegistroComponent } from './registro/registro.component';
+import { NosotrosComponent } from './nosotros/nosotros.component';
+import { InicioComponent } from './inicio/inicio.component';
+import { VistadetalleComponent } from './vistadetalle/vistadetalle.component';
+import { AdminsComponent } from './admins/admins.component';
+import { UserComponent } from './user/user.component';
+import { GenerosComponent } from './generos/generos.component';
 
 const routes: Routes = [
   {
-    path:'login',
-    component:LoginComponent
+    path: 'login',
+    component: LoginComponent,
   },
   {
-    path:'register',
-    component:RegisterComponent
+    path: 'registro',
+    component: RegistroComponent,
   },
   {
-    path:'index',
-    component:IndexComponent
-  }
+    path: 'nosotros',
+    component: NosotrosComponent,
+  },
+  {
+    path: 'generos',
+    component: GenerosComponent,
+  },
+  {
+    path: 'generos/:name',
+    component: GenerosComponent,
+  },
+  {
+    path: 'inicio',
+    component: InicioComponent,
+  },
+  {
+    path: 'vistadetalle',
+    component: VistadetalleComponent,
+  },
+  {
+    path: 'vistadetalle/:id',
+    component: VistadetalleComponent,
+  },
+  {
+    path: 'admins',
+    component: AdminsComponent,
+  },
+  {
+    path: 'user',
+    component: UserComponent,
+  },
 ];
 
 @NgModule({

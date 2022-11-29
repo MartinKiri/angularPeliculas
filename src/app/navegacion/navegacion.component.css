@@ -1,0 +1,26 @@
+/* implementaciones */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Teko&display=swap");
+/* Estructura componentes importantes */
+body {
+  font-family: "Roboto", sans-serif;
+}
+/* Barrade navegación */
+#barra {
+  height: 10%;
+  width: 100%;
+  background: black;
+}
+
+.logo {
+  font-family: "Teko", sans-serif;
+  color: #ef011f;
+}
+
+.busquedas {
+  background: #4d4373;
+  border-radius: 20px;
+  color: white;
+}
+
+
