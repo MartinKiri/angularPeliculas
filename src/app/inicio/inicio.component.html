@@ -4,7 +4,7 @@
     <p>Estas son las peliculas que mas se han visto en toda esta semana</p>
   </div>
   <div class="row">
-    <div *ngFor="let pelis of muestra.results | paginate: { itemsPerPage: 8, currentPage: page }"
+    <div *ngFor="let pelis of muestra.results | paginate: { itemsPerPage: 6, currentPage: page }"
       class="col-md-6 col-lg-4 cartas">
       <div class="card border-2">
         <a href="#">

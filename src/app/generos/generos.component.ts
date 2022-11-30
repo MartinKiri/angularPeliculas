@@ -8,19 +8,20 @@ import { UsabilidadService } from '../usabilidad.service';
 })
 export class GenerosComponent implements OnInit {
 
-  @Input() id='';
+  id='';
   
   pinta:string= this.service.url_imagen
+  
 
   constructor(private service: UsabilidadService) {}
-
+  
   ngOnInit(): void {
+    let ruta= console.log(sessionStorage.getItem('id'))
     
   }
 
   setMovieDetails = (id: any) => {
     sessionStorage.setItem('id', this.service.base_url + 'movie' + id + + this.service.api_key);
-    console.log(id)
   }
 
 }
