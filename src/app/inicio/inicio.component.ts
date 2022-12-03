@@ -8,6 +8,7 @@ import { UsabilidadService } from '../usabilidad.service';
 })
 export class InicioComponent implements OnInit {
   public page!: number;
+  public genere!:string;
   data: any;
   muestra: any;
   muestraimg :string=this.service.url_imagen;

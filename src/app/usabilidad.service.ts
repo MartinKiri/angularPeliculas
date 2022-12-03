@@ -15,11 +15,10 @@ export class UsabilidadService {
     this.base_url + 'discover/movie?sort_by=popularity.desc&' + this.api_key;
   public url_imagen = 'https://image.tmdb.org/t/p/w500';
   public buscador = 'search/movie';
-  public ruta= sessionStorage.getItem('id')
 
   constructor(private http: HttpClient) {}
 
-  getmovie = (url: any) => {
+  search = (url: any) => {
     return this.http.get(url);
   };
   getgeneros = () => {

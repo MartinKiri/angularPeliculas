@@ -9,15 +9,21 @@ import { UsabilidadService } from '../usabilidad.service';
 export class GenerosComponent implements OnInit {
 
   id='';
-  
+  ruta:any;
+  buscada:any
   pinta:string= this.service.url_imagen
   
 
   constructor(private service: UsabilidadService) {}
   
   ngOnInit(): void {
-    let ruta= console.log(sessionStorage.getItem('id'))
-    
+    this.ruta= console.log(sessionStorage.getItem('id'))
+    this.service.search(this.ruta).subscribe((ids)=>{
+      this.buscada= ids;
+      console.log(this.buscada);
+      
+      
+    })
   }
 
   setMovieDetails = (id: any) => {
